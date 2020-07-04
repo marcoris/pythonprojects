@@ -1,0 +1,8 @@
+x = int(input("Zahl:"))
+print("Betrag von  ", x, ":", abs(x))
+print()
+print(x, "Binär:", bin(x))
+print()
+print(x, "Hex:", hex(x))
+print()
+print(x, "Oct:", oct(x))
