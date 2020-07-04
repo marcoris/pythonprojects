@@ -28,7 +28,7 @@ class Spiel:
 
 class Aufgabe:
     # Aufgabe initialisieren
-    def __ini__(self, i, anzahl):
+    def __init__(self, i, anzahl):
         self.nr = i
         self.gesamt = anzahl
     
