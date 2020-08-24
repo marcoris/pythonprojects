@@ -1,22 +1,16 @@
-# Primzahltest
-z = 200
+from math import sqrt
+from itertools import count, islice
 
-def prim(x):
-    if abs(x) <= 1:
-        return "Ist keine Primzahl"
-    else:
-        if x < 0:
-            return prim(-x)
-        else:
-            return pr(2, x)
+n = int(input("Bitte Zahl eingeben: "))
 
-def pr(x, y):
-    if x >= y:
-        return "Ist Primzahl"
-    else:
-        if y % x != 0:
-            return "Ist keine Primzahl"
-        else:
-            return pr(x + 1, y)
+def isPrime(n):
+    if n < 2:
+        return "Keine Primzahl"
 
-print(z, prim(z))
+    for number in islice(count(2), int(sqrt(n) - 1)):
+        if n % number == 0:
+            return "Keine Primzahl"
+
+    return "Primzahl"
+
+print(isPrime(n))
